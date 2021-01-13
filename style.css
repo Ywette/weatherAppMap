@@ -1,0 +1,118 @@
+main{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.search-container{
+    justify-content: center;
+    width: 20%;
+
+}
+#city-input{
+    
+    max-width: 400px;
+    margin: 0 auto;
+}
+  
+.banner {
+    color: #FFD23F;
+    font-family: sans-serif;
+    margin-top: 5%;
+}
+h1 {
+    margin-bottom: 1%;
+}
+
+.map-container{
+    /* flex-grow: 1; */
+    /* height: 100%; */
+    border-radius: 12px;  
+    width: 50%;  
+    margin: 2%;    
+}
+#map{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;   
+}
+.form-group, .card-deck{
+    opacity: .5;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-container{
+    display: flex;
+    height: 50px;
+    width: 100%;
+}
+
+.weather-output{
+    display:flex;
+    margin-top: 2%;
+    width: 80%;
+    height: 70%;
+    justify-content: center;
+}
+
+.card-body{
+    height: 100%;    
+}
+.data-container{
+    width: 40%;
+    margin:2%;
+}
+.card-container{
+    width: 100%;
+    background-color: white;
+    opacity: .5;
+    border-radius: 5px;
+}
+
+.clear {
+    transition: 1s;
+    
+    background-image:url("https://images.unsplash.com/photo-1594612076552-7380d87f860d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTA4fHxzdW4lMjBza3klMjBsZWZ0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60");
+}
+.snow{
+    transition: 1s;
+    background-image:url("https://images.unsplash.com/photo-1519293515161-2b9fd3c9a4dc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+}
+.rain{
+    transition: 1s;
+    background-image:url("https://images.unsplash.com/photo-1486016006115-74a41448aea2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=747&q=80");
+}
+.mist{
+    transition: 1s;
+    background-image:url("https://images.unsplash.com/photo-1470217957101-da7150b9b681?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8bWlzdCUyMGluJTIwY2l0eXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60");
+}
+.clouds {
+    transition: 1s;
+    background-image:url("https://images.unsplash.com/photo-1489415964239-b86d5c6552ce?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTh8fGNsb3Vkc3xlbnwwfDB8MHw%3D&auto=format&fit=crop&w=300&q=60");
+
+}
+
+@media only screen and (max-width: 600px) {
+    main{
+        flex-direction: column;
+    }
+    .weather-output{
+        flex-direction: column-reverse;
+        height: 100vh;
+
+    }
+    .map-container{
+        width: 80%;
+        height: 100%;
+    }
+    .data-container{
+        width: 80%;
+    }
+
+  }

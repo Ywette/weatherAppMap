@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+</head>
+<body >
+    <main class="text-center">
+      <div class="header-container">
+        <h1 class="banner">Weather around the world</h1>
+          
+      </div> 
+
+      <div id="weather-output" class="weather-output">
+        <!-- MAP CONTAINER -->
+        
+        <div class="map-container">
+          <div class="map" id="map">
+          </div>
+        </div>
+        
+        <!-- CARD WITH DATA -->
+        <div class="data-container">
+          <div class="search-container">
+            <div class="form-group">
+                <input id="city-input" class="form-control form-control-lg" type="text" placeholder="Search city">
+            </div>
+            <button type="button" onclick="searchCity()" class="btn btn-lg btn-dark">Search</button>
+          </div>
+
+          <div class="card-container">
+            <div class="card-header">
+              <h4 id="city-name" class="my-0 font-weight-normal">----</h4>
+            </div>
+            <div class="card-body">
+              <h1 id="weather-type" class="card-title">----</h1>
+              <ul class="list-unstyled ">
+                <li>Temp: <span id="temp">--</span>°</li>
+                <li>Min Temp: <span id="min-temp">--</span>°</li>
+                <li>Max Temp: <span id="max-temp">--</span>°</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+     
+
+      </div>
+    </main>
+    <script src="script.js"></script>
+    <script src="map-style.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJ7VvobsIYLr3Pe6cTNUnIUvzgpV2Na-o&callback=initMap"
+    async defer></script>
+</body>
+</html>
