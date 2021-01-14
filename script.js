@@ -29,11 +29,12 @@ searchCity = () => {
 
 // Show the weather data in HTML 
 showWeatherData = (weatherData) => {  
-  document.getElementById("city-name").innerHTML = weatherData.name;
+    document.getElementById("city-name").innerHTML = weatherData.name;
   document.getElementById("weather-type").innerHTML = weatherData.weather[0].main;
   document.getElementById("temp").innerHTML = weatherData.main.temp;
   document.getElementById("min-temp").innerHTML = weatherData.main.temp_min;
   document.getElementById("max-temp").innerHTML = weatherData.main.temp_max;  
+  
 
 
   //change background
@@ -75,12 +76,11 @@ createMarker = () => {
 
 var input = document.getElementById("city-input");
 input.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {   
+  if (event.keyCode === 13) {  
     
     createMarker()
     searchCity()
-    document.getElementById('city-input').value = "";
-    
+    document.getElementById('city-input').value = "";  
     
   };    
 });
@@ -98,6 +98,7 @@ function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     zoom: 1,
     center: mapCenter,
-    styles: mapStyle
+    styles: mapStyle,  
+    disableDefaultUI: true
   });
 }
