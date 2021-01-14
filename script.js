@@ -29,29 +29,35 @@ searchCity = () => {
 
 // Show the weather data in HTML 
 showWeatherData = (weatherData) => {  
-    document.getElementById("city-name").innerHTML = weatherData.name;
+  document.getElementById("city-name").innerHTML = weatherData.name;
   document.getElementById("weather-type").innerHTML = weatherData.weather[0].main;
   document.getElementById("temp").innerHTML = weatherData.main.temp;
   document.getElementById("min-temp").innerHTML = weatherData.main.temp_min;
   document.getElementById("max-temp").innerHTML = weatherData.main.temp_max;  
-  
-
-
-  //change background
+    //change background
   
   let background = document.querySelector('main');
   let weatherType = weatherData.weather[0].main;
 
 
   if ( weatherType == "Clear"){
+    background.removeAttribute("class");
     background.classList.add("clear");    
   }else if( weatherType == "Snow"){
+    background.removeAttribute("class");
+
     background.classList.add("snow");
   }else if( weatherType == "Mist"){
+    background.removeAttribute("class");
+
     background.classList.add("mist");
   }else if( weatherType == "Rain"){
+    background.removeAttribute("class");
+
     background.classList.add("rain"); 
   }else if( weatherType == "Clouds"){
+    background.removeAttribute("class");
+
     background.classList.add("clouds");
   }
 }
@@ -68,7 +74,7 @@ createMarker = () => {
           lng: city.coord.lon
         },        
         map: map    
-      });
+      });      
     }).catch((error)=>{
     console.log(error);
     }) 
@@ -76,14 +82,13 @@ createMarker = () => {
 
 var input = document.getElementById("city-input");
 input.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {  
-    
-    createMarker()
-    searchCity()
-    document.getElementById('city-input').value = "";  
-    
+  if (event.keyCode === 13) {    
+    createMarker();
+    searchCity();     
+    input.value = "";
   };    
 });
+
 
 let currentTime = new Date();
 console.log(currentTime);
@@ -92,8 +97,8 @@ var map;
 var latlng;
 function initMap() {  
   var mapCenter = {  
-  lat: 35.095192,
-  lng: 33.203430
+  lat: 33.589886,
+  lng: -7.603869
   }
   map = new google.maps.Map(document.getElementById("map"), {
     zoom: 1,

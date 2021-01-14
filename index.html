@@ -7,44 +7,43 @@
     
 </head>
 <body >
-    <main class="text-center">
-      <div class="header-container">
-        <h1 class="banner">Weather around the world</h1>          
-      </div> 
+    <main>
+      <div class="glass">
+        <div class="header-container">
+          <h1 class="banner">Weather around the world</h1>          
+        </div> 
 
-      <div id="weather-output" class="weather-output">
-        <!-- MAP CONTAINER -->
-        
-        <div class="map-container">
-          <div class="map" id="map"></div>          
-        </div>
-        
-        <!-- CARD WITH DATA -->
-        <div class="data-container">
-          <div class="search-container">
-            <div class="forma-group">
-                <input id="city-input" class="form-control" type="text" placeholder="Type city">
-            </div>
-            <button type="button" onclick="searchCity()" class="btn btn-warning">Search</button>
+        <div id="weather-output" class="weather-output">
+          <!-- MAP CONTAINER -->
+          
+          <div class="map-container">
+            <div class="map" id="map"></div>          
           </div>
+          
+          <!-- CARD WITH DATA -->
+          <div class="data-container">
+            <div class="search-container">
+              <div class="forma-group">
+                  <input id="city-input" class="form-control" type="text" placeholder="Type city">
+              </div>
+              <button type="button" onclick="searchCity()" class="btn btn-warning">Search</button>
+            </div>
 
-          <div class="card-container">
-            <div class="card-header">
-              <h4 id="city-name" class="">----</h4>
+            <div class="card-container">
+              <div class="card-header">
+                <h4 id="city-name" class="">----</h4>
+              </div>
+              <div class="card-body">
+                <h1 id="weather-type" class="card-title">----</h1>
+                <ul class="list-unstyled ">
+                  <li>Temp: <span id="temp">--</span>°</li>
+                  <li>Min Temp: <span id="min-temp">--</span>°</li>
+                  <li>Max Temp: <span id="max-temp">--</span>°</li>
+                </ul>
+              </div>
             </div>
-            <div class="card-body">
-              <h1 id="weather-type" class="card-title">----</h1>
-              <ul class="list-unstyled ">
-                <li>Temp: <span id="temp">--</span>°</li>
-                <li>Min Temp: <span id="min-temp">--</span>°</li>
-                <li>Max Temp: <span id="max-temp">--</span>°</li>
-              </ul>
-            </div>
-          </div>
+          </div> 
         </div>
-
-     
-
       </div>
     </main>
     <script src="script.js"></script>
