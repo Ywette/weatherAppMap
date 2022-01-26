@@ -76,6 +76,10 @@ h1 {
     opacity: 0.7;
 }
 
+.form-group {
+    width: 100%;
+}
+
 .city-name{
     margin-bottom: 0;
     padding: 5px;
@@ -84,6 +88,7 @@ h1 {
 button{
     height: calc(1.5em + .75rem + 2px);
     font-family: 'Poppins', sans-serif;
+    padding: 8px;
 }
 
 .data-container{
@@ -98,7 +103,7 @@ button{
 
 .search-container{
     display: flex;
-    height: 50px;
+    /*height: 50px;*/
     width: 100%;
 }
 
@@ -153,15 +158,13 @@ button{
     background-image:url("https://images.unsplash.com/photo-1609780604185-347ff6124bff?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80");
 }
 
-@media only screen and (max-width: 800px) {
-    .card-title{
-        font-size: 2.5rem;
-    }
-}
-
-@media only screen and (max-width: 600px) {
+@media (max-width: 768px) {
     main{
         flex-direction: column;
+    }
+
+    .card-title{
+        font-size: 2.5rem;
     }
 
     .weather-output{

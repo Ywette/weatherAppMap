@@ -1,21 +1,20 @@
+let API_KEY = "a8e71c9932b20c4ceb0aed183e6a83bb";
 
-import API_KEY from "./apikey";
-
-const getWeatherData = (city) => {
+getWeatherData = (city) => {
   const URL = "https://api.openweathermap.org/data/2.5/weather";
   const FULL_URL = `${URL}?q=${city}&appid=${API_KEY}&units=metric`;
   const weatherPromise = fetch(FULL_URL);
 
   return weatherPromise
       .then((response)=>{
-        if(response.status === 404){
-          document.getElementById("city-name").innerHTML = "There is no data about this city";
+        if(response.status === 404 || city === ""){
+          document.getElementById("city-name").innerHTML = "There is no data about such city";
 s        }
         return response.json();
       })
 }
 
-const searchCity = () => {
+searchCity = () => {
   let city = document.getElementById('city-input').value;
   getWeatherData(city)
       .then((city)=>{
@@ -24,7 +23,7 @@ const searchCity = () => {
       })
 }
 
-const showWeatherData = (weatherData) => {
+showWeatherData = (weatherData) => {
   document.getElementById("city-name").innerHTML = weatherData.name;
   document.getElementById("weather-type").innerHTML = weatherData.weather[0].main;
   document.getElementById("temp").innerHTML = weatherData.main.temp;
@@ -36,7 +35,7 @@ const showWeatherData = (weatherData) => {
   let weatherType = weatherData.weather[0].main;
 
   background.removeAttribute("class");
-  if (weatherType === "Clear"){
+  if ( weatherType === "Clear"){
     background.classList.add("clear");
   }else if( weatherType === "Snow"){
     background.classList.add("snow");
@@ -49,7 +48,7 @@ const showWeatherData = (weatherData) => {
   }
 }
 
-const createMarker = () => {
+createMarker = () => {
   let city = document.getElementById('city-input').value;
   getWeatherData(city)
   .then((city)=>{
