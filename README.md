@@ -1,3 +1,5 @@
+![weatherapp_intro_img](https://github.com/Ywette/weatherAppMap/blob/main/assets/intro.JPG)
+
 # weatherAppMap
  weather application where you can search for weather in actual city on the google map.
  
